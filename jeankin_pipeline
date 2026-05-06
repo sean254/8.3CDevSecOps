@@ -1,1 +1,50 @@
+pipeline{
+    agent any
+
+    stages{
+        stage("Build"){
+            steps{
+                echo "Compiling and packaging of code"
+                echo "Apache Ant"
+                
+            }
+        }
+        stage("Unit and Intergration Tests"){
+            steps{
+                echo "Run unit Tests to check code fuctionality and purpose"
+                echo "PyTest"
+            }
+        }
+        stage("Code Analysis"){
+            steps{
+                echo "Analyse  code quality"
+                echo "SonarQube"
+            }
+        }
+        stage("Security Scan"){
+            steps{
+                echo "Conducting Security checks on codes "
+                echo "OWASP Dependency-Check"
+            }
+        }
+        stage("Deploy to Staging"){
+            steps{
+                echo "Deploying to Server"
+                echo "AWS EC2"
+            }
+        }
+        stage("Integration Tests on Staging"){
+            steps{
+                echo " Run integration tests on staging environment "
+                echo "Postman"
+            }
+        }
+        stage("Deploy to Production"){
+            steps{
+                echo " Deployment tp production Server "
+                echo "AWS EC2"
+            }
+        }
+    }
+}
 
