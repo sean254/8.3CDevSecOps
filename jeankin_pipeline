@@ -4,7 +4,7 @@ pipeline{
     stages {
         stage("Build"){
             steps{
-                echo "Compiling and  taja packaging of code"
+                echo "Compiling and packaging of code"
                 echo "Apache Ant"
                 
             }
