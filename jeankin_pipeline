@@ -1,4 +1,4 @@
-pipeline {
+pipeline{
     agent any
 
     stages {
@@ -45,5 +45,15 @@ pipeline {
                 echo "AWS EC2"
             }
         }
+        post {
+    always {
+        emailext(
+            subject: "Jenkins Build Log - ${currentBuild.fullDisplayName}",
+            body: "Build completed. The build log is attached.",
+            to: "kemboisean@gmail.com",
+            attachLog: true
+        )
+    }
+}
     }
 }
