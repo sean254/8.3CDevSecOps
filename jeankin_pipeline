@@ -4,11 +4,12 @@ pipeline{
     stages {
         stage("Build"){
             steps{
-                echo "Compiling and packaging of code"
+                echo "Compiling and  taja packaging of code"
                 echo "Apache Ant"
                 
             }
         }
+
         stage("Unit and Intergration Tests"){
             steps{
                 echo "Run unit Tests to check code fuctionality and purpose"
