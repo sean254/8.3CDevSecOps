@@ -4,7 +4,7 @@ pipeline{
     stages {
         stage("Build"){
             steps{
-                echo "Compiling and packaging of data packages  code"
+                echo "Compiling and packaging of data  code"
                 echo "Apache Ant"
                 
             }
